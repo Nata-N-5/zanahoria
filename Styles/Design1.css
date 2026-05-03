@@ -40,9 +40,9 @@
       }
 
       .panel {
-        max-width: 460px;
-        padding: 16px 18px;
-        border-radius: 18px;
+        max-width: 260px;           /* antes 460px */
+        padding: 10px 12px;         /* menos espacio interno */
+        border-radius: 14px;     
         background: var(--panel);
         color: var(--text);
         -webkit-backdrop-filter: blur(12px);
@@ -50,6 +50,7 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
         pointer-events: auto;
       }
+      
 
       .panel h1 {
         margin: 0 0 8px;
@@ -65,9 +66,28 @@
       .controls {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 6px;
         align-items: stretch;
+        
       }
+
+      /* BOTONES SOLO DE ESA SECCIÓN */
+.controls button {
+  padding: 6px 10px;          /* más pequeños */
+  font-size: 0.75rem;         /* texto más chico */
+  border-radius: 999px;
+}
+
+/* TEXTO DE ESTADO MÁS CHIQUITO */
+#status-text {
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+/* OPCIONAL: hacer todo el bloque menos ancho visualmente */
+.status {
+  min-width: 160px;           /* antes 220px */
+}
 
       button {
         border: 0;
